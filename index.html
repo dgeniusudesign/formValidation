@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Material Form</title>
+  <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="topSmallBar">
+  </div>
+  <nav class="navbar text-center">
+    <h1>Application Form</h1>
+  </nav>
+  <div class="container formDiv">
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        First Name
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="firstName" id="firstNameText">
+        <span id="firstNameErr"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Last Name
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="lastName" id="lastNameText">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Email
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="email" name="email" id="emailText">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Phone
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="phone" id="phoneText">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Date of Birth
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="date" name="dob" id="dateOfBirth">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Address Line 1
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="addLine1" id="addLine1Text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Address Line 2
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="addLine2" id="addLine2Text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        City
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="city" id="cityText">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Zipcode
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="zipcode" id="zipcodeText">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        State
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="state" id="stateText">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center">
+        Country
+      </div>
+      <div class="col-sm-6 text-center">
+        <input type="text" name="country" id="countryText">
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" onclick="showValues()"/>
+    </div>
+    <div class="row">
+      <p id="result">
+      </p>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="javascripts/main.js"></script>
+</body>
+</html>

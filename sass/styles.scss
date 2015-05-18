@@ -1,0 +1,31 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+.topSmallBar {
+  height: 20px;
+  background-color: #5D4037;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+.navbar {
+  background-color: #795548;
+  color: white;
+  border: none;
+  border-radius: 0;
+}
+
+// .formDiv {
+//   background-color: #455A64;
+//   color: white;
+// }
