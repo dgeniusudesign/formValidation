@@ -8586,3 +8586,8 @@ body {
   border: none;
   border-radius: 0;
 }
+
+/* line 33, ../sass/styles.scss */
+.initCap {
+  text-transform: capitalize;
+}
