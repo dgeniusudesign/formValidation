@@ -226,6 +226,34 @@ $(document).ready(function() {
       }
     }
   });
+  $("#luckyNumText").on('focusout', function() {
+    if( $(this).val() == "" ) {
+      $("#luckyNumErr").prev().prev().hide(); //Hiding any previous displayed valid icon
+      $("#luckyNumErr").text("luckyNum Number cannot be empty!");
+      $("#luckyNumErr").prev().show();
+      $("#luckyNumText").addClass("redBorder");
+      $("#luckyNumText").effect("shake",5);
+    }
+    else {
+      $("#luckyNumErr").prev().hide(); // Hiding any previous displayed invalid icon
+      $("#luckyNumErr").text("");
+      var re = /^\d{1}$/;
+      // console.log($("#luckyNumErr").val());
+      // console.log(re.test($("#luckyNumText").val()));
+      if(!re.test($("#luckyNumText").val())) {
+        $("#luckyNumErr").prev().prev().hide(); //Hiding any previous displayed valid icon
+        $("#luckyNumErr").text("Entered luckyNum Number isn't valid! Please enter a valid luckyNum number");
+        $("#luckyNumErr").prev().show();
+        $("#luckyNumText").addClass("redBorder");
+        $("#luckyNumText").effect("shake",5);
+      } else {
+        $("#luckyNumErr").prev().hide(); // Hiding any previous displayed invalid icon
+        $("#luckyNumErr").text("");
+        $("#luckyNumErr").prev().prev().show();
+        $("#luckyNumText").removeClass("redBorder");
+      }
+    }
+  });
   //Date of birth validation - check to see if the value is empty and throw an error if it is, else make
   //the error as nothing
   $("#dateOfBirth").on('focusout', function() {
@@ -320,4 +348,15 @@ $(document).ready(function() {
       }
     }
   });
+
+  $("#yesButton").click(function() {
+    alert("K");
+    location.href= 'luckyform.html';
+  })
+  $("#noButton").click(function() {
+    var data = {};
+    $("#mainForm").serializeArray().map(function(x){data[x.name] = x.value;});
+    $("#jsonDataPage").text(JSON.stringify(data));
+  });
 });
+

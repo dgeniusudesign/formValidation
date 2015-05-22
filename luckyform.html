@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lucky Draw</title>
+  <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/luckystyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container formDiv">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center" id="topHeaderLuck">
+        <h1>Lucky Draw Form</h1>
+      </div>
+    </div>
+    <div id="formContainer">
+      <div class="row inRow">
+        <div class="col-sm-4 col-sm-offset-2 text-center">
+          <p>Enter your lucky number<br/>
+          (between 0 and 9)</p>
+        </div>
+        <div class="col-sm-2 text-center">
+          <input type="text" name="luckyNumber" id="luckyNumText">
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="luckyNumErr"></span>
+        </div>
+      </div>
+      <div class="row inRow">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <p>Choose the colors you like from the following</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="checkbox"> Check me out <br/>
+          <input type="checkbox"> Check me out <br/>
+          <input type="checkbox"> Check me out <br/>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="checkbox"> Check me out <br/>
+          <input type="checkbox"> Check me out <br/>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="checkbox"> Check me out <br/>
+          <input type="checkbox"> Check me out <br/>
+        </div>
+      </div>
+      <div class="row inRow">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <p>Pick one of the following</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="radio"> Star Wars <br/>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="radio"> Harry Potter <br/>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="radio"> Lord of the Rings <br/>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="javascripts/main.js"></script>
+</body>
+</html>

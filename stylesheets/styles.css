@@ -8608,22 +8608,30 @@ body {
 }
 
 /* line 39, ../sass/styles.scss */
+#topHeaderLuck {
+  background-color: white;
+  color: #272727;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* line 46, ../sass/styles.scss */
 .fieldRow {
   background-color: #858D9F;
   color: white;
   padding: 13px;
   margin-bottom: 4px;
 }
-/* line 43, ../sass/styles.scss */
+/* line 50, ../sass/styles.scss */
 .fieldRow h3 {
   line-height: 26px;
   margin: 0 0 0 30%;
 }
-/* line 47, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 .fieldRow h2, .fieldRow h3 {
   font-size: 18px;
 }
-/* line 50, ../sass/styles.scss */
+/* line 57, ../sass/styles.scss */
 .fieldRow input {
   height: 26px;
   width: 220px;
@@ -8632,18 +8640,18 @@ body {
   padding: 7px;
   font-weight: bold;
 }
-/* line 58, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 .fieldRow .validImg, .fieldRow .invalidImg {
   height: 26px;
   width: 26px;
 }
 
-/* line 65, ../sass/styles.scss */
+/* line 72, ../sass/styles.scss */
 .redBorder {
   border: 2px solid #D27676 !important;
 }
 
-/* line 69, ../sass/styles.scss */
+/* line 76, ../sass/styles.scss */
 #submitButton {
   margin-top: 20px;
   background-color: #73C05F;
@@ -8652,21 +8660,76 @@ body {
   padding: 7px 20px;
 }
 
-/* line 77, ../sass/styles.scss */
+/* line 84, ../sass/styles.scss */
+#submitButton:hover, #createJSONButton:hover {
+  background-color: white;
+  color: black;
+}
+
+/* line 89, ../sass/styles.scss */
+.btn {
+  background-color: #73C05F;
+  border: none;
+  color: white;
+  border-radius: 0;
+  padding: 7px 20px;
+}
+
+/* line 97, ../sass/styles.scss */
+.btn-luck {
+  background-color: white;
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+/* line 103, ../sass/styles.scss */
+#createJSONButton {
+  position: relative;
+  top: -1px;
+}
+
+/* line 108, ../sass/styles.scss */
 .imgButton {
   margin: 0 5px;
   display: inline;
   background-color: #C5C7CB;
   padding: 7px 15px;
 }
-/* line 78, ../sass/styles.scss */
+/* line 109, ../sass/styles.scss */
 .imgButton p {
   display: inline;
   font-weight: bold;
   color: #2e2e2e;
 }
 
-/* line 89, ../sass/styles.scss */
+/* line 120, ../sass/styles.scss */
 #luckyQuestion {
   padding-bottom: 30px;
+}
+
+/* line 124, ../sass/styles.scss */
+#formContainer {
+  background-color: white;
+  color: #272727;
+}
+
+/* line 129, ../sass/styles.scss */
+.inRow {
+  padding: 30px 90px;
+}
+/* line 131, ../sass/styles.scss */
+.inRow p {
+  font-weight: bold;
+  font-size: 22px;
+}
+/* line 135, ../sass/styles.scss */
+.inRow .validImg, .inRow .invalidImg {
+  height: 26px;
+  width: 26px;
+}
+
+/* line 141, ../sass/styles.scss */
+#luckyNumText {
+  width: 20px;
+  border-bottom: 1px black !important;
 }

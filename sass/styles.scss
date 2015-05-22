@@ -36,6 +36,13 @@ body {
   margin-bottom: 30px;
 }
 
+#topHeaderLuck {
+  background-color: white;
+  color: #272727;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
 .fieldRow {
   background-color: #858D9F;
   color: white;
@@ -74,6 +81,30 @@ body {
   padding: 7px 20px;
 }
 
+#submitButton:hover, #createJSONButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn {
+  background-color: #73C05F;
+  border: none;
+  color: white;
+  border-radius: 0;
+  padding: 7px 20px;
+}
+
+.btn-luck {
+  background-color: white;
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+#createJSONButton {
+  position: relative;
+  top: -1px;
+}
+
 .imgButton {
   p {
     display: inline;
@@ -88,4 +119,26 @@ body {
 
 #luckyQuestion {
   padding-bottom: 30px;
+}
+
+#formContainer {
+  background-color: white;
+  color: #272727;
+}
+
+.inRow {
+  padding: 30px 90px;
+  p {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .validImg, .invalidImg {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+#luckyNumText {
+  width: 20px;
+  border-bottom: 1px black !important;
 }

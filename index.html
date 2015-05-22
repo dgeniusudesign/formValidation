@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sample Material Form</title>
+  <title>Application Form</title>
   <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -11,170 +11,167 @@
         <h1>Application Form</h1>
       </div>
     </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>First Name</h3>
+    <form id="mainForm">
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>First Name</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="firstName" id="firstNameText" class="initCap">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="firstNameErr"></span>
+        </div>
       </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="firstName" id="firstNameText" class="initCap">
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Last Name</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="lastName" id="lastNameText" class="initCap">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="lastNameErr"></span>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="firstNameErr"></span>
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Email ID</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="email" name="email" id="emailText">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="emailErr"></span>
+        </div>
       </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Last Name</h3>
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Phone Number</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="phone" id="phoneText">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="phoneErr"></span>
+        </div>
       </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="lastName" id="lastNameText" class="initCap">
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Date of Birth</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="date" name="dob" id="dateOfBirth">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="dateErr"></span>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="lastNameErr"></span>
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Address Line 1</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="addLine1" id="addLine1Text">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="addLine1Err"></span>
+        </div>
       </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Email ID</h3>
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Apartment/Suite Number</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="addLine2" id="addLine2Text">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="addLine2Err"></span>
+        </div>
       </div>
-      <div class="col-sm-4 text-center">
-        <input type="email" name="email" id="emailText">
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>City</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="city" id="cityText">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="cityErr"></span>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="emailErr"></span>
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Zipcode</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="zipcode" id="zipcodeText">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="zipErr"></span>
+        </div>
       </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Phone Number</h3>
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>State</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="state" id="stateText">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="stateErr"></span>
+        </div>
       </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="phone" id="phoneText">
+      <div class="row fieldRow">
+        <div class="col-sm-4">
+          <h3>Country</h3>
+        </div>
+        <div class="col-sm-4 text-center">
+          <input type="text" name="country" id="countryText">
+        </div>
+        <div class="col-sm-4">
+          <img src="img/valid.png" class="validImg">
+          <img src="img/invalid.png" class="invalidImg">
+          <span id="countryErr"></span>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="phoneErr"></span>
-      </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Date of Birth</h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <input type="date" name="dob" id="dateOfBirth">
-      </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="dateErr"></span>
-      </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Address Line 1</h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="addLine1" id="addLine1Text">
-      </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="addLine1Err"></span>
-      </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Apartment/Suite Number</h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="addLine2" id="addLine2Text">
-      </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="addLine2Err"></span>
-      </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>City</h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="city" id="cityText">
-      </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="cityErr"></span>
-      </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Zipcode</h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="zipcode" id="zipcodeText">
-      </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="zipErr"></span>
-      </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>State</h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="state" id="stateText">
-      </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="stateErr"></span>
-      </div>
-    </div>
-    <div class="row fieldRow">
-      <div class="col-sm-4">
-        <h3>Country</h3>
-      </div>
-      <div class="col-sm-4 text-center">
-        <input type="text" name="country" id="countryText">
-      </div>
-      <div class="col-sm-4">
-        <img src="img/valid.png" class="validImg">
-        <img src="img/invalid.png" class="invalidImg">
-        <span id="countryErr"></span>
-      </div>
-    </div>
+    </form>
     <div class="row fieldRow" id="luckyQuestion">
       <h2 class="text-center">Would you like to take part in our lucky draw?</h2><br/>
       <div class="text-center">
-        <div class="text-center imgButton">
-          <img src="img/valid.png" height="20" width="20">
-          <p>Yes</p>
-        </div>
-        <div class="text-center imgButton">
-          <img src="img/invalid.png" height="20" width="20">
-          <p>No</p>
-        </div>
+        <button class="btn btn-default btn-luck" id="yesButton">
+          <img src="img/valid.png" height="20" width="20">Yes
+        </button>
+        <button class="btn btn-default btn-luck" id="noButton">
+          <img src="img/invalid.png" height="20" width="20">No
+        </button>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-4 col-sm-offset-4 text-center">
         <input type="submit" onclick="showValues()" id="submitButton"/>
+        <button class="btn btn-default" onclick="createJSON()" type="submit" id="createJSONButton">Create JSON</button>
       </div>
-    </div>
-    <div class="row">
-      <p id="result">
-      </p>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
