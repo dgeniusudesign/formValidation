@@ -5,135 +5,172 @@
   <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <div class="topSmallBar">
-  </div>
-  <nav class="navbar text-center">
-    <h1>Application Form</h1>
-  </nav>
   <div class="container formDiv">
     <div class="row">
-      <div class="col-sm-4 text-center">
-        First Name
+      <div class="col-sm-6 col-sm-offset-3 text-center" id="topHeader">
+        <h1>Application Form</h1>
+      </div>
+    </div>
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>First Name</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="firstName" id="firstNameText" class="initCap">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="firstNameErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Last Name
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Last Name</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="lastName" id="lastNameText" class="initCap">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="lastNameErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Email ID
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Email ID</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="email" name="email" id="emailText">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="emailErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Phone Number
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Phone Number</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="phone" id="phoneText">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="phoneErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Date of Birth
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Date of Birth</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="date" name="dob" id="dateOfBirth">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="dateErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Address Line 1
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Address Line 1</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="addLine1" id="addLine1Text">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="addLine1Err"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Apartment/Suite Number(Optional)
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Apartment/Suite Number</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="addLine2" id="addLine2Text">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="addLine2Err"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        City
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>City</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="city" id="cityText">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="cityErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Zipcode
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Zipcode</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="zipcode" id="zipcodeText">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="zipErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        State
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>State</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="state" id="stateText">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="stateErr"></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        Country
+    <div class="row fieldRow">
+      <div class="col-sm-4">
+        <h3>Country</h3>
       </div>
       <div class="col-sm-4 text-center">
         <input type="text" name="country" id="countryText">
       </div>
       <div class="col-sm-4">
+        <img src="img/valid.png" class="validImg">
+        <img src="img/invalid.png" class="invalidImg">
         <span id="countryErr"></span>
       </div>
     </div>
+    <div class="row fieldRow" id="luckyQuestion">
+      <h2 class="text-center">Would you like to take part in our lucky draw?</h2><br/>
+      <div class="text-center">
+        <div class="text-center imgButton">
+          <img src="img/valid.png" height="20" width="20">
+          <p>Yes</p>
+        </div>
+        <div class="text-center imgButton">
+          <img src="img/invalid.png" height="20" width="20">
+          <p>No</p>
+        </div>
+      </div>
+    </div>
     <div class="row">
-      <input type="submit" onclick="showValues()"/>
+      <div class="col-sm-4 col-sm-offset-4 text-center">
+        <input type="submit" onclick="showValues()" id="submitButton"/>
+      </div>
     </div>
     <div class="row">
       <p id="result">
@@ -141,6 +178,7 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="javascripts/main.js"></script>
 </body>
 </html>

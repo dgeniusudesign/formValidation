@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 /* line 9, ../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -8569,25 +8569,104 @@ button.close {
   }
 }
 /* line 12, ../sass/styles.scss */
-.topSmallBar {
-  height: 20px;
-  background-color: #5D4037;
-}
-
-/* line 17, ../sass/styles.scss */
 body {
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
+  background: #606c88;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #5f6b86 0%, #3e4b6a 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #5f6b86), color-stop(100%, #3e4b6a));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #5f6b86 0%, #3e4b6a 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #5f6b86 0%, #3e4b6a 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #5f6b86 0%, #3e4b6a 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #5f6b86 0%, #3e4b6a 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
-/* line 21, ../sass/styles.scss */
-.navbar {
-  background-color: #795548;
-  color: white;
-  border: none;
-  border-radius: 0;
-}
-
-/* line 33, ../sass/styles.scss */
+/* line 24, ../sass/styles.scss */
 .initCap {
   text-transform: capitalize;
+}
+
+/* line 28, ../sass/styles.scss */
+.formDiv {
+  padding: 2% 7%;
+}
+
+/* line 32, ../sass/styles.scss */
+#topHeader {
+  background-color: #858D9F;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* line 39, ../sass/styles.scss */
+.fieldRow {
+  background-color: #858D9F;
+  color: white;
+  padding: 13px;
+  margin-bottom: 4px;
+}
+/* line 43, ../sass/styles.scss */
+.fieldRow h3 {
+  line-height: 26px;
+  margin: 0 0 0 30%;
+}
+/* line 47, ../sass/styles.scss */
+.fieldRow h2, .fieldRow h3 {
+  font-size: 18px;
+}
+/* line 50, ../sass/styles.scss */
+.fieldRow input {
+  height: 26px;
+  width: 220px;
+  border: none;
+  color: #2e2e2e;
+  padding: 7px;
+  font-weight: bold;
+}
+/* line 58, ../sass/styles.scss */
+.fieldRow .validImg, .fieldRow .invalidImg {
+  height: 26px;
+  width: 26px;
+}
+
+/* line 65, ../sass/styles.scss */
+.redBorder {
+  border: 2px solid #D27676 !important;
+}
+
+/* line 69, ../sass/styles.scss */
+#submitButton {
+  margin-top: 20px;
+  background-color: #73C05F;
+  border: none;
+  color: white;
+  padding: 7px 20px;
+}
+
+/* line 77, ../sass/styles.scss */
+.imgButton {
+  margin: 0 5px;
+  display: inline;
+  background-color: #C5C7CB;
+  padding: 7px 15px;
+}
+/* line 78, ../sass/styles.scss */
+.imgButton p {
+  display: inline;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+
+/* line 89, ../sass/styles.scss */
+#luckyQuestion {
+  padding-bottom: 30px;
 }

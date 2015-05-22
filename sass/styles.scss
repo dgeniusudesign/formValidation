@@ -7,29 +7,85 @@
 // Import Bootstrap for Sass
 @import "bootstrap";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto);
-
-.topSmallBar {
-  height: 20px;
-  background-color: #5D4037;
-}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
+  background: #606c88; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  hsla(222,17%,45%,1) 0%, hsla(222,26%,33%,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,hsla(222,17%,45%,1)), color-stop(100%,hsla(222,26%,33%,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  hsla(222,17%,45%,1) 0%,hsla(222,26%,33%,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  hsla(222,17%,45%,1) 0%,hsla(222,26%,33%,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  hsla(222,17%,45%,1) 0%,hsla(222,26%,33%,1) 100%); /* IE10+ */
+  background: linear-gradient(135deg,  hsla(222,17%,45%,1) 0%,hsla(222,26%,33%,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-
-.navbar {
-  background-color: #795548;
-  color: white;
-  border: none;
-  border-radius: 0;
-}
-
-// .formDiv {
-//   background-color: #455A64;
-//   color: white;
-// }
 
 .initCap {
   text-transform: capitalize;
+}
+
+.formDiv {
+  padding: 2% 7%;
+}
+
+#topHeader {
+  background-color: #858D9F;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.fieldRow {
+  background-color: #858D9F;
+  color: white;
+  padding: 13px;
+  h3 {
+    line-height: 26px;
+    margin: 0 0 0 30%;
+  }
+  h2, h3 {
+    font-size: 18px;
+  }
+  input {
+    height: 26px;
+    width: 220px;
+    border: none;
+    color: #2e2e2e;
+    padding: 7px;
+    font-weight: bold;
+  }
+  .validImg, .invalidImg {
+    height: 26px;
+    width: 26px;
+  }
+  margin-bottom: 4px;
+}
+
+.redBorder {
+  border: 2px solid #D27676 !important;
+}
+
+#submitButton {
+  margin-top: 20px;
+  background-color: #73C05F;
+  border: none;
+  color: white;
+  padding: 7px 20px;
+}
+
+.imgButton {
+  p {
+    display: inline;
+    font-weight: bold;
+    color: #2e2e2e;
+  }
+  margin: 0 5px;
+  display: inline;
+  background-color: #C5C7CB;
+  padding: 7px 15px;
+}
+
+#luckyQuestion {
+  padding-bottom: 30px;
 }
