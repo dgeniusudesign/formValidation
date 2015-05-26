@@ -13,6 +13,63 @@ function showValues() {
   $("#result").text(fN+lN+e+p+d+a1+a2+c+z+s+n);
 }
 
+var isValid = false;
+var firstNameValid = false;
+var lastNameValid = false;
+var emailValid = false;
+var phoneValid = false;
+var dobValid = false;
+var add1Valid = false;
+var add2Valid = false;
+var cityValid = false;
+var zipcodeValid = false;
+var stateValid = false;
+var countryValid = false;
+var luckyValid = false;
+
+function checkValid() {
+  if( firstNameValid && lastNameValid && emailValid && phoneValid && dobValid && add1Valid && add2Valid && cityValid && zipcodeValid && stateValid && countryValid ) {
+    isValid = true;
+    $("#errDiv").hide();
+  }
+  else {
+    isValid = false;
+  }
+}
+
+function goToThanks() {
+  if(luckyValid) {
+    location.href = "thankyou.html";
+  }
+  else {
+    $("#luckyErrDiv").show();
+    $("#luckyErrMsg").text("Please complete the form");
+  }
+}
+
+$(document).ready(function() {
+  $("#errDiv").hide();
+  $("#luckyErrDiv").hide();
+  $("#yesButton").click(function() {
+    checkValid();
+    if(isValid) {
+      location.href= 'luckyform.html';
+    } else {
+      $("#errDiv").show();
+      $("#errorMsg").text("Please complete the form before proceeding.");
+    }
+  })
+  $("#noButton").click(function() {
+    checkValid();
+    if(isValid) {
+      location.href= 'thankyou.html';
+    } else {
+      $("#errDiv").show();
+      $("#errorMsg").text("Please complete the form before proceeding.");
+    }
+  });
+});
+
 $(document).ready(function() {
   /*
   All the code below has been commented because a single function can be used to implement all this
@@ -128,6 +185,7 @@ $(document).ready(function() {
   function validateCommon(str, msg) {
     var strTxt = "#"+str+"Text";
     var strErr = "#"+str+"Err";
+    var strVal = str+"Valid";
     $(strTxt).on('focusout', function() {
       //If the value is empty, an error is displayed stating that text box cannot be empty
       if( $(strTxt).val() == "" ) {
@@ -136,6 +194,23 @@ $(document).ready(function() {
         $(strErr).prev().show(); //Showing the invalid icon
         $(strTxt).addClass("redBorder");
         $(strTxt).effect("shake",5);
+        switch(str) {
+            case "firstName":
+              firstNameValid=false;
+              break;
+            case "lastName":
+              lastNameValid=false;
+              break;
+            case "state":
+              stateValid=false;
+              break;
+            case "city":
+              cityValid=false;
+              break;
+            case "country":
+              countryValid=false;
+              break;
+          }
       }
       //If the text box is not empty, then the error message is set to nothing and the words being typed
       //are automatically converted to Initcap
@@ -151,13 +226,48 @@ $(document).ready(function() {
           $(strErr).prev().show(); // Displaying the invalid icon
           $(strTxt).addClass("redBorder");
           $(strTxt).effect("shake",5);
+          switch(str) {
+            case "firstName":
+              firstNameValid=false;
+              break;
+            case "lastName":
+              lastNameValid=false;
+              break;
+            case "state":
+              stateValid=false;
+              break;
+            case "city":
+              cityValid=false;
+              break;
+            case "country":
+              countryValid=false;
+              break;
+          }
         } else {
           $(strErr).prev().hide(); // Hiding any previous displayed invalid icon
           $(strErr).text("");
           $(strErr).prev().prev().show(); // Showing valid icon
           $(strTxt).removeClass("redBorder");
+          switch(str) {
+            case "firstName":
+              firstNameValid=true;
+              break;
+            case "lastName":
+              lastNameValid=true;
+              break;
+            case "state":
+              stateValid=true;
+              break;
+            case "city":
+              cityValid=true;
+              break;
+            case "country":
+              countryValid=true;
+              break;
+          }
         }
         $(strTxt).addClass("initCap");
+        checkValid();
       }
     });
   }
@@ -175,6 +285,7 @@ $(document).ready(function() {
       $("#emailErr").prev().show();
       $("#emailText").addClass("redBorder");
       $("#emailText").effect("shake",5);
+      emailValid = false;
     }
     //If the email field is not empty, then a regex is used to validate the email ID and if it is not
     //valid an error message is displayed
@@ -189,13 +300,16 @@ $(document).ready(function() {
         $("#emailErr").prev().show();
         $("#emailText").addClass("redBorder");
         $("#emailText").effect("shake",5);
+        emailValid = false;
       } else {
         $("#emailErr").prev().hide(); // Hiding any previous displayed invalid icon
         $("#emailErr").text("");
         $("#emailErr").prev().prev().show();
         $("#emailText").removeClass("redBorder");
+        emailValid = true;
       }
     }
+    checkValid();
   });
   //Same as above
   $("#phoneText").on('focusout', function() {
@@ -205,6 +319,7 @@ $(document).ready(function() {
       $("#phoneErr").prev().show();
       $("#phoneText").addClass("redBorder");
       $("#phoneText").effect("shake",5);
+      phoneValid = false;
     }
     else {
       $("#phoneErr").prev().hide(); // Hiding any previous displayed invalid icon
@@ -218,21 +333,25 @@ $(document).ready(function() {
         $("#phoneErr").prev().show();
         $("#phoneText").addClass("redBorder");
         $("#phoneText").effect("shake",5);
+        phoneValid = false;
       } else {
         $("#phoneErr").prev().hide(); // Hiding any previous displayed invalid icon
         $("#phoneErr").text("");
         $("#phoneErr").prev().prev().show();
         $("#phoneText").removeClass("redBorder");
+        phoneValid = true;
       }
     }
+    checkValid();
   });
   $("#luckyNumText").on('focusout', function() {
     if( $(this).val() == "" ) {
       $("#luckyNumErr").prev().prev().hide(); //Hiding any previous displayed valid icon
       $("#luckyNumErr").text("luckyNum Number cannot be empty!");
       $("#luckyNumErr").prev().show();
-      $("#luckyNumText").addClass("redBorder");
+      $("#luckyNumText").addClass("redBorderBottom");
       $("#luckyNumText").effect("shake",5);
+      luckyValid = false;
     }
     else {
       $("#luckyNumErr").prev().hide(); // Hiding any previous displayed invalid icon
@@ -244,13 +363,16 @@ $(document).ready(function() {
         $("#luckyNumErr").prev().prev().hide(); //Hiding any previous displayed valid icon
         $("#luckyNumErr").text("Entered luckyNum Number isn't valid! Please enter a valid luckyNum number");
         $("#luckyNumErr").prev().show();
-        $("#luckyNumText").addClass("redBorder");
+        $("#luckyNumText").addClass("redBorderBottom");
         $("#luckyNumText").effect("shake",5);
+        luckyValid = false;
       } else {
         $("#luckyNumErr").prev().hide(); // Hiding any previous displayed invalid icon
         $("#luckyNumErr").text("");
         $("#luckyNumErr").prev().prev().show();
-        $("#luckyNumText").removeClass("redBorder");
+        $("#luckyNumText").removeClass("redBorderBottom");
+        luckyValid = true;
+        $("#luckyErrDiv").hide();
       }
     }
   });
@@ -263,12 +385,15 @@ $(document).ready(function() {
       $("#dateErr").prev().show();
       $("#dateOfBirth").addClass("redBorder");
       $("#dateOfBirth").effect("shake",5);
+      dobValid = false;
     } else {
       $("#dateErr").prev().hide(); // Hiding any previous displayed invalid icon
       $("#dateErr").text("");
       $("#dateErr").prev().prev().show();
       $("#dateOfBirth").removeClass("redBorder");
+      dobValid = true;
     }
+    checkValid();
   });
   //Address validation is similar to how the names are handled except that the regex allows numbers and
   //special characters
@@ -280,6 +405,7 @@ $(document).ready(function() {
       $("#addLine1Err").prev().show();
       $("#addLine1Text").addClass("redBorder");
       $("#addLine1Text").effect("shake",5);
+      add1Valid = false;
     }
     //If the text box is not empty, then the error message is set to nothing and the words being typed
     //are automatically converted to Initcap
@@ -295,13 +421,16 @@ $(document).ready(function() {
         $("#addLine1Err").prev().show();
         $("#addLine1Text").addClass("redBorder");
         $("#addLine1Text").effect("shake",5);
+        add1Valid = false;
       } else {
         $("#addLine1Err").prev().hide(); // Hiding any previous displayed invalid icon
         $("#addLine1Err").text("");
         $("#addLine1Err").prev().prev().show();
         $("#addLine1Text").removeClass("redBorder");
+        add1Valid = true;
       }
       $("#addLine1Text").addClass("initCap");
+      checkValid();
     }
   });
   //Same as above - Address Line 2 validation. Regex checks for only numbers
@@ -314,12 +443,15 @@ $(document).ready(function() {
         $("#addLine2Err").prev().show();
         $("#addLine2Text").addClass("redBorder");
         $("#addLine2Text").effect("shake",5);
+        add2Valid = false;
       } else {
         $("#addLine2Err").prev().hide(); // Hiding any previous displayed invalid icon
         $("#addLine2Err").text("");
         $("#addLine2Err").prev().prev().show();
         $("#addLine2Text").removeClass("redBorder");
+        add2Valid = true;
       }
+      checkValid();
   });
   //Similar to phone number validation except that the regex is different as it doesn't restrict
   //the number of digits(yet)
@@ -330,6 +462,7 @@ $(document).ready(function() {
       $("#zipErr").prev().show();
       $("#zipcodeText").addClass("redBorder");
       $("#zipcodeText").effect("shake",5);
+      zipcodeValid = false;
     }
     else {
       $("#zipErr").text("");
@@ -340,23 +473,16 @@ $(document).ready(function() {
         $("#zipErr").prev().show();
         $("#zipcodeText").addClass("redBorder");
         $("#zipcodeText").effect("shake",5);
+        zipcodeValid = false;
       } else {
         $("#zipErr").prev().hide(); // Hiding any previous displayed invalid icon
         $("#zipErr").text("");
         $("#zipErr").prev().prev().show();
         $("#zipcodeText").removeClass("redBorder");
+        zipcodeValid = true;
       }
     }
-  });
-
-  $("#yesButton").click(function() {
-    alert("K");
-    location.href= 'luckyform.html';
-  })
-  $("#noButton").click(function() {
-    var data = {};
-    $("#mainForm").serializeArray().map(function(x){data[x.name] = x.value;});
-    $("#jsonDataPage").text(JSON.stringify(data));
+    checkValid();
   });
 });
 

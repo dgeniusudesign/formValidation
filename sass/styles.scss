@@ -36,11 +36,15 @@ body {
   margin-bottom: 30px;
 }
 
-#topHeaderLuck {
+#topHeaderLuck, #topHeaderThanks{
   background-color: white;
   color: #272727;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+#topHeaderThanks {
+  margin-top: 20%;
 }
 
 .fieldRow {
@@ -66,11 +70,15 @@ body {
     height: 26px;
     width: 26px;
   }
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 }
 
 .redBorder {
   border: 2px solid #D27676 !important;
+}
+
+.redBorderBottom {
+  border-bottom: 2px solid #D27676 !important;
 }
 
 #submitButton {
@@ -101,8 +109,7 @@ body {
 }
 
 #createJSONButton {
-  position: relative;
-  top: -1px;
+  margin-top: 20px;
 }
 
 .imgButton {
@@ -128,6 +135,7 @@ body {
 
 .inRow {
   padding: 30px 90px;
+  font-size: 22px;
   p {
     font-weight: bold;
     font-size: 22px;
@@ -139,6 +147,57 @@ body {
 }
 
 #luckyNumText {
-  width: 20px;
-  border-bottom: 1px black !important;
+  border: none;
+  width: 25px;
+  border-bottom: 2px solid black;
+}
+
+.checkbox-div {
+  padding: 10px 34px;
+}
+
+.checkboxContainer {
+  padding: 0 5%;
+}
+
+#blueGreyText {
+  background-color: #607D8B;
+}
+
+#redText {
+  background-color: #F44336;
+}
+
+#greyText {
+  background-color: #9E9E9E;
+}
+
+#brownText {
+  background-color: #795548;
+}
+
+#greenText {
+  background-color: #4CAF50;
+}
+
+#lightBlueText {
+  background-color: #03A9F4;
+}
+
+#deepOrangeText {
+  background-color: #FF5722;
+}
+
+input[type="checkbox"] {
+  margin: 20px 0 0;
+}
+
+#blueGreyText, #redText, #lightBlueText, #deepOrangeText, #greenText, #greyText, #brownText {
+  color: white;
+  padding: 2px 15px;
+}
+
+#errDiv, #luckyErrDiv {
+  background-color: #D27676;
+  color: white;
 }

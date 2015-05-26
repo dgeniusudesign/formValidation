@@ -14,12 +14,12 @@
     </div>
     <div id="formContainer">
       <div class="row inRow">
-        <div class="col-sm-4 col-sm-offset-2 text-center">
+        <div class="col-sm-4 col-sm-offset-4 text-center">
           <p>Enter your lucky number<br/>
           (between 0 and 9)</p>
         </div>
-        <div class="col-sm-2 text-center">
-          <input type="text" name="luckyNumber" id="luckyNumText">
+        <div class="col-sm-1 text-center">
+          <input type="text" name="luckyNumber" id="luckyNumText" class="text-center">
         </div>
         <div class="col-sm-2 text-center">
           <img src="img/valid.png" class="validImg">
@@ -31,18 +31,20 @@
         <div class="col-sm-8 col-sm-offset-2 text-center">
           <p>Choose the colors you like from the following</p>
         </div>
-        <div class="col-sm-4 text-center">
-          <input type="checkbox"> Check me out <br/>
-          <input type="checkbox"> Check me out <br/>
-          <input type="checkbox"> Check me out <br/>
-        </div>
-        <div class="col-sm-4 text-center">
-          <input type="checkbox"> Check me out <br/>
-          <input type="checkbox"> Check me out <br/>
-        </div>
-        <div class="col-sm-4 text-center">
-          <input type="checkbox"> Check me out <br/>
-          <input type="checkbox"> Check me out <br/>
+        <div class="checkboxContainer">
+          <div class="col-sm-4 checkbox-div">
+            <input type="checkbox" name="favColor" value="blueGrey"> <span id="blueGreyText">Blue Grey</span> <br/>
+            <input type="checkbox" name="favColor" value="red"> <span id="redText">Red</span><br/>
+            <input type="checkbox" name="favColor" value="grey"> <span id="greyText">Grey</span> <br/>
+          </div>
+          <div class="col-sm-4 checkbox-div">
+            <input type="checkbox" name="favColor" value="brown"> <span id="brownText">Brown</span> <br/>
+            <input type="checkbox" name="favColor" value="green"> <span id="greenText">Green</span> <br/>
+          </div>
+          <div class="col-sm-4 checkbox-div">
+            <input type="checkbox" name="favColor" value="deepOrange"> <span id="deepOrangeText">Deep Orange</span> <br/>
+            <input type="checkbox" name="favColor" value="lightBlue"> <span id="lightBlueText">Light Blue</span> <br/>
+          </div>
         </div>
       </div>
       <div class="row inRow">
@@ -50,15 +52,22 @@
           <p>Pick one of the following</p>
         </div>
         <div class="col-sm-4 text-center">
-          <input type="radio"> Star Wars <br/>
+          <input type="radio" name="theOption"> Star Wars <br/>
         </div>
         <div class="col-sm-4 text-center">
-          <input type="radio"> Harry Potter <br/>
+          <input type="radio" name="theOption"> Harry Potter <br/>
         </div>
         <div class="col-sm-4 text-center">
-          <input type="radio"> Lord of the Rings <br/>
+          <input type="radio" name="theOption"> Lord of the Rings <br/>
         </div>
       </div>
+      <div class="inRow text-center" id="luckyErrDiv">
+        <p id="luckyErrMsg"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4 text-center">
+        <input type="submit" onclick="goToThanks()" id="submitButton"/>
       </div>
     </div>
   </div>

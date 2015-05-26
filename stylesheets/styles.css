@@ -8608,7 +8608,7 @@ body {
 }
 
 /* line 39, ../sass/styles.scss */
-#topHeaderLuck {
+#topHeaderLuck, #topHeaderThanks {
   background-color: white;
   color: #272727;
   text-transform: uppercase;
@@ -8616,22 +8616,27 @@ body {
 }
 
 /* line 46, ../sass/styles.scss */
+#topHeaderThanks {
+  margin-top: 20%;
+}
+
+/* line 50, ../sass/styles.scss */
 .fieldRow {
   background-color: #858D9F;
   color: white;
   padding: 13px;
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 }
-/* line 50, ../sass/styles.scss */
+/* line 54, ../sass/styles.scss */
 .fieldRow h3 {
   line-height: 26px;
   margin: 0 0 0 30%;
 }
-/* line 54, ../sass/styles.scss */
+/* line 58, ../sass/styles.scss */
 .fieldRow h2, .fieldRow h3 {
   font-size: 18px;
 }
-/* line 57, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 .fieldRow input {
   height: 26px;
   width: 220px;
@@ -8640,18 +8645,23 @@ body {
   padding: 7px;
   font-weight: bold;
 }
-/* line 65, ../sass/styles.scss */
+/* line 69, ../sass/styles.scss */
 .fieldRow .validImg, .fieldRow .invalidImg {
   height: 26px;
   width: 26px;
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 76, ../sass/styles.scss */
 .redBorder {
   border: 2px solid #D27676 !important;
 }
 
-/* line 76, ../sass/styles.scss */
+/* line 80, ../sass/styles.scss */
+.redBorderBottom {
+  border-bottom: 2px solid #D27676 !important;
+}
+
+/* line 84, ../sass/styles.scss */
 #submitButton {
   margin-top: 20px;
   background-color: #73C05F;
@@ -8660,13 +8670,13 @@ body {
   padding: 7px 20px;
 }
 
-/* line 84, ../sass/styles.scss */
+/* line 92, ../sass/styles.scss */
 #submitButton:hover, #createJSONButton:hover {
   background-color: white;
   color: black;
 }
 
-/* line 89, ../sass/styles.scss */
+/* line 97, ../sass/styles.scss */
 .btn {
   background-color: #73C05F;
   border: none;
@@ -8675,61 +8685,124 @@ body {
   padding: 7px 20px;
 }
 
-/* line 97, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 .btn-luck {
   background-color: white;
   color: #2e2e2e;
   font-weight: bold;
 }
 
-/* line 103, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 #createJSONButton {
-  position: relative;
-  top: -1px;
+  margin-top: 20px;
 }
 
-/* line 108, ../sass/styles.scss */
+/* line 115, ../sass/styles.scss */
 .imgButton {
   margin: 0 5px;
   display: inline;
   background-color: #C5C7CB;
   padding: 7px 15px;
 }
-/* line 109, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 .imgButton p {
   display: inline;
   font-weight: bold;
   color: #2e2e2e;
 }
 
-/* line 120, ../sass/styles.scss */
+/* line 127, ../sass/styles.scss */
 #luckyQuestion {
   padding-bottom: 30px;
 }
 
-/* line 124, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 #formContainer {
   background-color: white;
   color: #272727;
 }
 
-/* line 129, ../sass/styles.scss */
+/* line 136, ../sass/styles.scss */
 .inRow {
   padding: 30px 90px;
+  font-size: 22px;
 }
-/* line 131, ../sass/styles.scss */
+/* line 139, ../sass/styles.scss */
 .inRow p {
   font-weight: bold;
   font-size: 22px;
 }
-/* line 135, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 .inRow .validImg, .inRow .invalidImg {
   height: 26px;
   width: 26px;
 }
 
-/* line 141, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
 #luckyNumText {
-  width: 20px;
-  border-bottom: 1px black !important;
+  border: none;
+  width: 25px;
+  border-bottom: 2px solid black;
+}
+
+/* line 155, ../sass/styles.scss */
+.checkbox-div {
+  padding: 10px 34px;
+}
+
+/* line 159, ../sass/styles.scss */
+.checkboxContainer {
+  padding: 0 5%;
+}
+
+/* line 163, ../sass/styles.scss */
+#blueGreyText {
+  background-color: #607D8B;
+}
+
+/* line 167, ../sass/styles.scss */
+#redText {
+  background-color: #F44336;
+}
+
+/* line 171, ../sass/styles.scss */
+#greyText {
+  background-color: #9E9E9E;
+}
+
+/* line 175, ../sass/styles.scss */
+#brownText {
+  background-color: #795548;
+}
+
+/* line 179, ../sass/styles.scss */
+#greenText {
+  background-color: #4CAF50;
+}
+
+/* line 183, ../sass/styles.scss */
+#lightBlueText {
+  background-color: #03A9F4;
+}
+
+/* line 187, ../sass/styles.scss */
+#deepOrangeText {
+  background-color: #FF5722;
+}
+
+/* line 191, ../sass/styles.scss */
+input[type="checkbox"] {
+  margin: 20px 0 0;
+}
+
+/* line 195, ../sass/styles.scss */
+#blueGreyText, #redText, #lightBlueText, #deepOrangeText, #greenText, #greyText, #brownText {
+  color: white;
+  padding: 2px 15px;
+}
+
+/* line 200, ../sass/styles.scss */
+#errDiv, #luckyErrDiv {
+  background-color: #D27676;
+  color: white;
 }
